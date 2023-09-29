@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- // Chapter 46, 48 (Events) -->
+<button onclick="alert('Clicked!')">Click Me</button>
+<div id="elementToHide">I will be hidden</div>
+<button onclick="document.getElementById('elementToHide').style.display='none'">Hide Element</button>
+<a href="#" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Hover me</a>
+<a href="#" onclick="window.scrollTo(0,0); return false;">Scroll to Top</a>
+<a href="#" onclick="document.getElementById('myAudio').play()">Play Sound</a>
+<audio id="myAudio" src="your_audio_file.mp3"></audio>
+<a href="http://www.example.com" target="_blank">Open New Window</a>
+<a href="http://www.example.com" target="_blank">Open New Window</a>
+<button onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='green'">Hover me</button>
+<button onclick="document.getElementById('myAudio').play()">Play Sound</button>
+<audio id="myAudio" src="your_audio_file.mp3"></audio>
+<div onmouseover="alert('Mouse is over me!')">Move Mouse Over Me</div>
+<div onmouseout="this.style.display='none'">Move Mouse Out of Me</div>
+<a href="#" onclick="openNewWindow()">Open New Window</a>
+<input type="text" id="myInput"/>
+<button onclick="printInput()">Print to Console</button>
+input type="checkbox" id="myCheckbox"/>
+<button onclick="printCheckboxValue()">Print Checkbox Value</button>
+<select id="mySelect">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+  </select>
+  <button onclick="printSelectedValue()">Print Selected Value</button>
+  <form id="regForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required/>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required/>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required/>
+    <button type="submit">Register</button>
+  </form>
+  <p id="expandable">This is a short description. <span id="moreText" style="display:none;">Here is the expanded text with more description and details.</span></p>
+<button onclick="showMore()">Show More</button>
+<p id="searchParagraph">This is a sample paragraph for searching a specific word or phrase.</p>
+<button onclick="searchText('word')">Search Text</button>
+<p id="paragraph">This is a sample paragraph with several different word lengths.</p>
+<button onclick="findLongestWord()">Find Longest Word</button>
+<input type="text" id="textField" />
+<button onclick="setText()">Set Text</button>
+<p id="paragraph"></p>
+<input type="text" id="textField" />
+<button onclick="setText('specificWord')">Set Text</button>
+<p id="paragraph"></p>
+
+<script>
+function openNewWindow() {
+    var myWindow = window.open("", "", "width=400,height=400");
+    myWindow.document.write('<button onclick="window.close()">Close me</button>');
+}
+</script>
+    <script src="app.js"></script>
+</body>
+</html>
